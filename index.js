@@ -9,13 +9,23 @@ const getGitInfo = async ()=>{
 
 	const page = await browser.newPage();
 
-	await page.goto("https://github.com/arpitjaswal?tab=repositories",{
+	await page.goto("https://quotes.toscrape.com/",{
 	waitUntil:"domcontentloaded",	
 	});
 
 	const quotes = await page.evaluate(()=>{
-		const gitProjects = document.querySelector("col-12 d-flex flex-justify-between width-full py-4 border-bottom color-border-muted public source");
-		return {gitProjects}
+		const quoteList = document.querySelectorAll(".quote");
+
+		const FinalArray = Array.from(quoteList).map((quote)=>{
+			
+			const quoteText=quote.querySelector(".text").innerHTML;
+
+                const author = quote.querySelector(".author").innerHTML;
+		 return {quoteText,author}
+
+
+		})
+		return FinalArray;
 	})
 	console.log(quotes)
 
