@@ -1,0 +1,24 @@
+{
+  "name": "webscrapping",
+  "version": "1.0.0",
+  "description": "yo, trying to commit from terminal.  thanks, arpit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arpitjaswal/webscrapping.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arpitjaswal/webscrapping/issues"
+  },
+  "homepage": "https://github.com/arpitjaswal/webscrapping#readme",
+  "dependencies": {
+    "puppeteer": "^24.2.1"
+  }
+}
