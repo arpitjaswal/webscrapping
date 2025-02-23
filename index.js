@@ -1,4 +1,6 @@
-import puppeteer from "puppeteer"
+import puppeteer from "puppeteer";
+import {chromium,firefox,webkit} from "playwright";
+
 
 const getGitInfo = async ()=>{
 	const browser=await puppeteer.launch({
@@ -32,4 +34,19 @@ const getGitInfo = async ()=>{
 
 };
 
-getGitInfo();
+const usingPlayWright=async()=>{
+	console.log("started using playwright");
+	const browser=await chromium.launch();
+
+
+
+	const page= await browser.newPage();
+	await page.goto("https://www.google.com")
+	
+
+
+}
+
+
+//getGitInfo();
+usingPlayWright();

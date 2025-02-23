@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/arpitjaswal/webscrapping#readme",
   "dependencies": {
+    "playwright": "^1.50.1",
     "puppeteer": "^24.2.1"
   }
 }
